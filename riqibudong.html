@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- <span class="hours"></span>:
+	<span class="minutes"></span>:
+	<span class="seconds"></span> -->
+	<h1></h1>
+	<script>
+	function fun(){
+		
+		 var dateNow = new Date( );
+	   	var hours = dateNow.getHours();
+	   	var minutes = dateNow.getMinutes();
+	   	var seconds = dateNow.getSeconds();
+
+         var hTime = hours + ":" + minutes + ":" +seconds;
+         document.querySelector('h1').innerHTML=hTime;
+	};
+	  setInterval(fun,1000)
+	  
+
+		
+	</script>
+</body>
+</html>

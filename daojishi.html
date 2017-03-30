@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<!-- <audio src=""></audio> -->
+    <h1></h1>
+	<script>
+	 	function fun(){
+		var target = new Date("2017/3/30 15:30");
+		var targetTime = target.getTime();
+
+		var now = new Date();
+		var nowTime = now.getTime();
+		// now.setTime(now.getTime()+250)
+		// days =(target-)
+		var sub = targetTime - nowTime;;
+
+		var day = Math.floor(sub / (1000*60*60*24));
+		var subDay = Math.floor(sub%(1000*60*60*24));
+
+		var hours = Math.floor(subDay / (1000*60*60));
+		var subhours = Math.floor(subDay%(1000*60*60));
+
+		var minutes= Math.floor(subhours / (1000*60));
+		var subminutes = Math.floor(subhours%(1000*60));
+
+		var seconds = Math.floor(subminutes / (1000));
+		var subseconds = Math.floor(subminutes%(1000));
+
+		
+
+	    // if(){
+
+	    // }
+		var hTime = day +"天" +":" + hours + ":" +minutes+":" +seconds;
+         document.querySelector('h1').innerHTML=hTime;
+		// alert(hTime);
+		}
+		fun();
+		setInterval(fun,1000)
+	</script>
+</body>
+</html>

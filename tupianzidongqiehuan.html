@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	 *{
+	 	margin: 0;
+	 	padding: 0;
+
+	 }
+	 img{
+	 	width: 500px;
+	 	height: 400px;
+
+	 }
+		li{
+			width: 100px;
+			height: 30px;
+			list-style: none;
+			text-decoration: none;
+			float: left;
+			text-align: center;
+			border: 1px solid blue;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<img class="pic" src="猫猫.jpg" alt="">
+ 	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+		<script>
+		
+
+		var pic=document.querySelector('.pic')
+		var n=5;
+		setInterval(function(){
+			n--;
+			if(n===5){
+			pic.src='猫猫.jpg'}
+			
+			if(n===4){
+			pic.src='狗狗.jpg'}
+			if(n===3){
+			pic.src='帅.jpg'}
+			if(n===2){
+			pic.src='兔子.jpg'}
+			if(n===1){
+			pic.src='菊花.jpg'}
+			if(n===0){
+			pic.src='猫猫.jpg'
+				n=5}
+			},1000)
+	</script>
+	
+
+	<script src="jquery.js"></script>
+	<script>
+		$('li').click(function(){
+			var ind= $(this).index();
+			var picsrc= [
+			'猫猫.jpg',
+			'狗狗.jpg',
+			'帅.jpg',
+			'兔子.jpg',
+			'菊花.jpg',			
+			]
+			var mysrc=picsrc[ind];
+			$('.pic').attr('src',mysrc)
+		})
+	</script>
+</body>
+</html>

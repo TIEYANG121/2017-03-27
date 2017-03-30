@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+
+	<audio src="1.mp3 " controls></audio>
+	<div>
+	<button class="btn">播放</button>
+	</div>
+    
+	<script>
+	var audio = document.querySelector('audio');
+	document.querySelector('.btn').onclick = function(){
+				if(this.innerHTML==='播放'){
+					audio.play()
+					this.innerHTML='暂停'
+				}else{
+					audio.pause()
+					this.innerHTML='播放'
+				}
+
+
+	}
+	    
+		// var n=5;
+		// setInterval(function(){
+		// 	n--;
+		// 	if(n===0){
+		// 		document.querySelector('audio').play();
+		// 	}
+
+		// 	},1000)
+			
+	
+	</script>
+</body>
+</html>
